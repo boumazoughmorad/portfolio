@@ -106,12 +106,12 @@ export default function  Work () {
 					className='flex-1 flex flex-col gap-y-12 '
 				>
 					
-					<div className='group relative overflow-hidden border-2 border-white/50 rounded-xl mt-16'>
-						{/* Overlay */}
+					<div className='group relative overflow-hidden border-2 border-white/50 rounded-xl mt-3'>
+				
 						<div className='group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300'></div>
-						{/* Img */}
-						<img className='group-hover:scale-125 transition-all duration-500 w-full  h-full' src={"/app.png"} alt="" />
-						{/* Pretitle */}
+						
+						<img className='group-hover:scale-125 transition-all duration-500 w-full  h-full' src={"/app.PNG"} alt="" />
+						
 						<div className='absolute  -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50'>
 						<a className='text-gradient cursor-pointer' href='https://github.com/boumazoughmorad/Cafe_Management' target='__black'>
 							Github
