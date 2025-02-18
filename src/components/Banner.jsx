@@ -34,8 +34,8 @@ export default function Banner() {
                         sequence={[
                             'Developer Full Stack',
                             2000,
-                            'Designer',
-                            2000,
+                            // 'Designer',
+                            // 2000,
                             
                         ]}
                         speed={50}
