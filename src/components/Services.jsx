@@ -1,112 +1,141 @@
 "use client"
 import React from 'react';
-// Icon
-import { BsArrowUpRight } from 'react-icons/bs'
-// Motion
-import { motion } from 'framer-motion'
-// Variants
-import { fadeIn } from '@/variants'
+import { motion } from 'framer-motion';
+import { fadeIn } from '@/variants';
 
-// Services data
-const services = [
-    {
-		name: 'BackEnd developemnt',
-		description: 'Server Management / Database Management / API Development / Authentication and Authorization /Testing and Debugging.',
-        tools: ['Spring Boot', 'JEE','Node.js', 'Flask'],
-		link: 'Learn more',
-	},
-    {
-		name: 'FrontEnd Developement',
-		description: 'User Interface (UI) Design / Core Technologies /Frontend Frameworks and Libraries / API Integration.',
-        tools: ['React', 'Vue.js', 'Angular', 'Tailwind CSS', 'Bootstrap'], 
-        link: 'Learn more',
-	},
-    {
-        name: 'UI/UX Design',
-        description: 'User Experience (UX) Principles / User Interface (UI) Design / Wireframing & Prototyping / Design Systems & Accessibility.',
-        tools: ['Figma', 'Adobe XD'],
-        link: 'Learn more'
-    },
-    
-	
-]
+const skills = [
+  {
+    category: 'Backend Development',
+    items: [
+      { name: 'Spring Boot', level: 90 },
+      { name: 'Spring MVC', level: 85 },
+      { name: 'Spring Security', level: 80 },
+      { name: 'JPA/Hibernate', level: 88 },
+      { name: 'REST API', level: 92 },
+      { name: 'JUnit', level: 75 },
+    ],
+    icon: '💻'
+  },
+  {
+    category: 'Frontend Development',
+    items: [
+      { name: 'Angular', level: 85 },
+      { name: 'TypeScript', level: 90 },
+      { name: 'React', level: 80 },
+      { name: 'Tailwind CSS', level: 88 },
+      { name: 'RxJS', level: 75 },
+      { name: 'HTML5/CSS3', level: 95 },
+    ],
+    icon: '🎨'
+  },
+  {
+    category: 'Databases',
+    items: [
+      { name: 'PostgreSQL', level: 85 },
+      { name: 'MySQL', level: 80 },
+      { name: 'MongoDB', level: 70 },
+      { name: 'Oracle', level: 75 },
+    ],
+    icon: '🗄️'
+  },
+  {
+    category: 'DevOps & Tools',
+    items: [
+      { name: 'Docker', level: 80 },
+      { name: 'AWS', level: 70 },
+      { name: 'Git', level: 95 },
+      { name: 'Kubernetes', level: 65 },
+      { name: 'Jenkins', level: 60 },
+    ],
+    icon: '🛠️'
+  },
+  {
+    category: 'Methodologies',
+    items: [
+      { name: 'Agile/Scrum', level: 85 },
+      { name: 'UML', level: 80 },
+      { name: 'Design Patterns', level: 75 },
+      { name: 'CI/CD', level: 70 },
+    ],
+    icon: '📊'
+  }
+];
 
-export default function  Services()  {
-	return (
-		<section className="section" id="services">
-			<div className="container mx-auto">
-				<div className='flex flex-col lg:flex-row'>
-					{/* Text & Image */}
-					<motion.div
-						variants={fadeIn("right", 0.3)}
-						initial="hidden"
-						whileInView={"show"}
-						viewport={{ once: false, amount: 0.3 }}
-						className='flex-1 lg:bg-services lg:bg-bottom bg-no-repeat mix-blend-lighten mb-12 lg:mb-0'
-					>
-						<h2 className='h2 text-accent mb-6'>What I Do.</h2>
-						<h3 className='h3 max-w-[455px] mb-16'></h3>
-						<button className='btn btn-sm'>See my work</button>
-					</motion.div>
+export default function Skills() {
+  return (
+    <section className="section h-auto" id="skills">
+      <div className="container mx-auto">
+        <motion.div
+          variants={fadeIn("up", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.2 }}
+          className="flex flex-col xl:flex-row gap-10"
+        >
+          {/* Title */}
+          <div className="xl:max-w-[30%]">
+            <motion.h2 
+              variants={fadeIn("right", 0.2)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.2 }}
+              className="h2 text-accent mb-4"
+            >
+              My <span className="text-white">Skills.</span>
+            </motion.h2>
+            <motion.p
+              variants={fadeIn("right", 0.2)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.2 }}
+              className="mb-6 max-w-[500px] mx-auto xl:mx-0"
+            >
+              Here are the technologies and methodologies I've mastered through years of development experience.
+            </motion.p>
+          </div>
 
-					{/* Services */}
-					<motion.div
-						variants={fadeIn("left", 0.5)}
-						initial="hidden"
-						whileInView={"show"}
-						viewport={{ once: false, amount: 0.3 }}
-						className='flex-1'
-					>
-						{/* Service list */}
-						<div>
-							{
-								services.map((service, index) => {
-									// destructure service
-									const { name, description,tools, link } = service;
-									return (
-										<div className='border-b border-white/20 h-[146px] mb-[38px] flex' key={index}>
-											<div className='max-w-[476px]'>
-												<h4 className='text-[20px] tracking-wider font-primary font-semibold mb-6'>
-													{name}
-												</h4>
-												<p className='font-secondary leading-tight'>
-													{description}
-												</p>
-                                                <p className='font-secondary text-gray-500 flex gap-2'>
-                                                {tools.map((tool, i) => {
-                                                    return(
-                                                        <span
-                                                        key={i}
-                                                        className="underline underline-offset-4 decoration-4 decoration-transparent relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[4px] after:bg-gradient-to-r after:from-[#406aff] after:via-[#3bace2] after:to-[#ff56f6] after:rounded-full"
-                                                        >
-                                                        {tool}
-                                                        </span>
-
-
-                                                       )
-                                                })
-                                                }
-													
-												</p>
-											</div>
-											<div className='flex flex-col flex-1 items-end'>
-												<a href="#services" className='btn w-9 h-9 mb-[42px] flex justify-center items-center'>
-													<BsArrowUpRight />
-												</a>
-												<a href="#services" className='text-gradient text-sm'>
-													{link}
-												</a>
-											</div>
-										</div>
-									)
-								})
-							}
-						</div>
-					</motion.div>
-				</div>
-			</div>
-		</section>
-	);
-};
-
-
+          {/* Skills Grid */}
+          <div className="w-full xl:max-w-[70%]">
+            <div className="grid md:grid-cols-2 gap-6">
+              {skills.map((skillGroup, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeIn("up", 0.2 + index * 0.2)}
+                  initial="hidden"
+                  whileInView={"show"}
+                  viewport={{ once: true, amount: 0.2 }}
+                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300"
+                >
+                  <div className="flex items-center gap-4 mb-6">
+                    <span className="text-3xl">{skillGroup.icon}</span>
+                    <h3 className="text-xl font-bold text-white">{skillGroup.category}</h3>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    {skillGroup.items.map((skill, i) => (
+                      <div key={i} className="relative group">
+                        <div className="flex justify-between mb-1">
+                          <span className="text-sm font-medium text-white/80">{skill.name}</span>
+                          <span className="text-xs text-accent">{skill.level}%</span>
+                        </div>
+                        <div className="w-full bg-white/10 rounded-full h-2">
+                          <motion.div
+                            initial={{ width: 0 }}
+                            whileInView={{ width: `${skill.level}%` }}
+                            transition={{ duration: 1, delay: 0.2 + i * 0.1 }}
+                            viewport={{ once: true }}
+                            className="h-2 rounded-full bg-gradient-to-r from-accent to-pink-500"
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}

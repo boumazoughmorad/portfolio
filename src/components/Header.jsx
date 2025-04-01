@@ -12,7 +12,7 @@ export default function Header() {
 
             {/* Button */}
             <button className="btn btn-sm" >
-            <a  href={'./cv.pdf'} download > Downlownd CV</a>
+            <a  href={'./morad_boumazough.pdf'} download > Downlownd CV</a>
             </button>
             
         </div>

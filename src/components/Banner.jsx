@@ -30,15 +30,20 @@ export default function Banner() {
                     className="mb-6 text-[36px] lg:text-[60px] font-secondary font-semibold uppercase leading-[1]"
                 >
                     <span className="text-white mr-4">I am a</span>
+                    <br/>
                     <TypeAnimation
                         sequence={[
                             'Developer Full Stack',
+                         
+                            'Java / Angular..♥',
+                            'Java / React..♥',
+                            'JEE..♥',
+                            'Developer Full Stack',
                             2000,
-                            // 'Designer',
-                            // 2000,
+                         
                             
                         ]}
-                        speed={50}
+                        speed={1}
                         className="text-accent"
                         wrapper="span"
                         repeat={Infinity}
@@ -52,12 +57,8 @@ export default function Banner() {
                     viewport={{ once: false, amount: 0.7 }}
                     className="mb-8 max-w-lg mx-auto lg:mx-0"
                 >
-                    Proficient in Spring Boot, JEE, Angular, NextJS, React JS, Python,
-HTML, CSS, JavaScript, React, Angular, Next.js, and RESTful
-APIs, I possess solid programming skills and a commitment
-to problem-solving. I stay up-to-date with innovations in
-software engineering, driven by a passion for delivering
-cutting-edge solutions.
+                    Développeur full-stack Java JEE | Spring Boot | Angular avec expérience dans la création d’applications web
+                    performantes et évolutives. Passionné par les technologies modernes et la conception d’architectures robustes.
                 </motion.p>
 
                 <motion.div

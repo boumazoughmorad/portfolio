@@ -42,12 +42,11 @@ export default function  About  ()  {
 						</h3>
 
 						<p className="mb-6">
-                        Proficient in Spring Boot, JEE, Angular, NextJS, React JS, Python,
-HTML, CSS, JavaScript, React, Angular, Next.js, and RESTful
-APIs, I possess solid programming skills and a commitment
-to problem-solving. I stay up-to-date with innovations in
-software engineering, driven by a passion for delivering
-cutting-edge solutions.
+                        Proficient in Spring Boot, JEE, Angular, React JS, 
+						HTML, CSS, JavaScript, and RESTful APIs, I possess solid programming skills and a commitment
+						to problem-solving. I stay up-to-date with innovations in
+						software engineering, driven by a passion for delivering
+						cutting-edge solutions.
 						</p>
 
 						{/* Stats */}
